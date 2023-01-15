@@ -24,8 +24,12 @@
 
     <title>Locust titans</title>
   </head>
-  <body class="bg-gradient-to-b from-gray-900 via-blue-900 to-blue-800">
+  <body class="font-gloria">
 
+
+    <!-- 
+      Phone menu
+    -->
 
     <div id="phone-body" class="relative z-50 lg:hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
       <!--
@@ -53,18 +57,18 @@
                 </button>
               </div>
     
-              <div class="flex h-full flex-col overflow-y-scroll bg-blue-900 py-6 shadow-xl">
+              <div class="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                 <div class="px-4 sm:px-6">
-                  <h2 class="text-2xl font-nabla" id="slide-over-title">Locust Titans</h2>
+                  <h2 class="text-2xl font-gloria text-blue-700" id="slide-over-title">Locust <span class="text-yellow-400">Titans</span> </h2>
                 </div>
                 <div class="relative mt-6 flex-1 px-4 sm:px-6">
                   <!-- content -->
                   <div class="pt-6 px-1 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                       <div class="space-y-2 font-gloria py-6">
-                        <a href="#home" onclick="togglePhoneMenu()" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-400/10">Home</a>
+                        <a href="#home" onclick="togglePhoneMenu()" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-700 hover:bg-gray-400/10">Home</a>
         
-                        <a href="#our-team" onclick="togglePhoneMenu()" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-400/10">Our Team</a>
+                        <a href="#our-team" onclick="togglePhoneMenu()" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-700 hover:bg-gray-400/10">Our Team</a>
                       </div>
                     </div>
                   </div>
@@ -77,107 +81,97 @@
       </div>
     </div>
     
-
-
     <!-- 
-      Header
-    -->
-    <section id="home" class=" dark:bg-gray-900">
+      home
+     -->
+     <section id="home" class="bg-white dark:bg-gray-900">
       <nav x-data="{ isOpen: false }" class="container p-6 mx-auto lg:flex lg:justify-between lg:items-center">
           <div class="flex items-center justify-between">
               <div>
-                  <a class="text-2xl font-nabla font-bold text-sky-800 dark:text-skybg-sky-500 lg:text-6xl dark:hover:text-gray-300" href="#">Locust <span class="text-sky-500">Titans</span> </a>
+                  <a class="text-2xl font-bold text-blue-700 dark:text-white lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300" href="#">Locust <span class="text-yellow-400">Titans</span> </a>
               </div>
   
-              <!-- 
-                Mobile menu button 
-              -->
+              <!-- Mobile menu button -->
               <div class="flex lg:hidden">
-                  <button type="button" id="phone-open-btn" onclick="togglePhoneMenu()" class="text-gray-50 animate-pulse dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <button onclick="togglePhoneMenu()" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                      <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                           <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
                       </svg>
                   </button>
               </div>
           </div>
   
-          <div class="absolute hidden inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
-              <div class="flex flex-col space-y-4 font-gloria text-2xl lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0">
-                  <a class="text-gray-50 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-sky-400 hover:text-sky-500" href="#home">Home</a>
-                  <a class="text-gray-50 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-sky-400 hover:text-sky-500" href="#our-team">Our team</a>
+          <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+          <div class="absolute hidden inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
+              <div class="flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:-px-8 lg:space-y-0">
+                  <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500" href="#">Home</a>
+                  <a class="text-gray-700 transition-colors duration-300 transform lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500" href="#">Our Team</a>
               </div>
           </div>
       </nav>
-
-      <!-- 
-        home main 
-      -->
   
       <div class="container px-6 py-16 mx-auto text-center">
-          <div class="max-w-lg mx-auto font-gloria">
-              <h1 class="text-5xl font-bungee text-sky-100 lg:text-[70px]">Welcome Home!</h1>
-              <p class="mt-6 text-gray-50 dark:text-gray-300">✅ Locust hall is the best building among all dorms in Monroe College's new Rochelle campus</p>
-                <a
-                  class="mt-6 inline-block rounded px-8 text-xl font-medium text-yellow-400 transition hover:rotate-2 hover:scale-110"
-                  href="#our-team"
-                >
-                  👉 Our team
-                </a>
-              <p class="mt-3 text-xs text-gray-300 ">Thank you for visiting our website</p>
+          <div class="max-w-lg mx-auto">
+              <h1 class="text-3xl font-bungee text-gray-800 dark:text-white lg:text-4xl">Welcome home!</h1>
+              <p class="mt-6 text-gray-500 dark:text-gray-300">Locust hall is the best building among all dorms in New Rochelle Campus</p>
+              
+              <a href="#our-team" class="text-blue-700 p-4 transition-colors duration-300 transform text-sm lg:mx-8 dark:text-gray-200 dark:hover:text-blue-400 hover:text-blue-500" href="#">👉 Our Team</a>
+              <p class="mt-3 text-xs text-gray-400 ">✅ Thank you for visiting our website</p>
           </div>
   
           <div class="flex justify-center mt-10">
-            <img class="object-cover object-top w-full h-96 rounded-xl lg:w-4/5" src="./locust.jpeg" />
+              <img class="object-cover w-full h-96 rounded-xl lg:w-4/5" src="./locust.jpeg" />
           </div>
       </div>
-
-      
-    </section>
-
+  </section>
 
     <!-- 
-      Our team section
-    -->
-    <section id="our-team" class=" font-gloria dark:bg-gray-900">
-      <div class="container px-6 py-10 mx-auto relative flex flex-col items-end">
-
-          <div class="w-full">
-            <h1 class="text-5xl font-bungee text-center text-sky-50 capitalize lg:text-[70px]">our team</h1>
-          </div>
+      Team
+     -->
+    <section id="our-team" class="bg-white dark:bg-gray-900">
+    
+      <div class="container px-6 py-8 mx-auto">
+          <h2 class="text-3xl font-bungee text-center text-gray-800 capitalize lg:text-4xl dark:text-white">Our Team</h2>
   
-          <p class="max-w-2xl mx-auto my-6 text-center text-gray-50 dark:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
-          </p>
+          <div class="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              <a href="" class="group w-full max-w-xs text-center">
+                  <img class="group-hover:opacity-75 object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=739&q=80" alt="avatar" />
   
-          <div class="flex items-center justify-center w-full">
-              <div class="flex items-center p-1 border border-sky-50 dark:border-sky-400 rounded-lg">
-                  <button class="px-4 py-2 text-sm font-medium capitalize bg-sky-50 md:py-3 rounded-md md:px-12"><span class="text-xl"> 👉 </span> RD</button>
-                  <button class="px-4 py-2 mx-4 text-sm font-medium text-sky-50 capitalize transition-colors duration-300 md:py-3 dark:text-sky-400 dark:hover:text- focus:outline-none hover:bg-sky-50 hover:text-gray-700 rounded-md md:mx-8 md:px-12">GRD</button>
-                  <button class="px-4 py-2 text-sm font-medium text-sky-50 capitalize transition-colors duration-300 md:py-3 dark:text-sky-400 dark:hover:text- focus:outline-none hover:bg-sky-50 hover:text-gray-700 rounded-md md:px-12">RAs</button>
-              </div>
-          </div>
+                  <div class="mt-2">
+                      <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Ahmed Omer</h3>
+                      <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">👨‍✈️ Resident Director</span>
+                  </div>
+              </a>
   
-          <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
-              <a href="" class="flex flex-col items-center group">
-                  <img class="object-cover w-full rounded-xl aspect-square group-hover:opacity-75" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="">
+              <a href="" class="group w-full max-w-xs text-center">
+                  <img class="group-hover:opacity-75 object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1516756587022-7891ad56a8cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar" />
   
-                  <h1 class="mt-4 text-2xl font-semibold text-gray-50 capitalize dark:text-">Temajio Boodle</h1>
+                  <div class="mt-2">
+                      <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Jane Doe</h3>
+                      <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">👮‍♂️ Resident Asistant</span>
+                  </div>
+              </a>
   
-                  <p class="mt-2 text-gray-50 capitalize dark:text-gray-300">Resident Director</p>
+              <a href="" class="group w-full max-w-xs text-center">
+                  <img class="group-hover:opacity-75 object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=731&q=80" alt="avatar" />
   
+                  <div class="mt-2">
+                      <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Steve Ben</h3>
+                      <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">👮‍♂️ Resident Asistant</span>
+                  </div>
+              </a>
+  
+              <a href="" class="group w-full max-w-xs text-center">
+                  <img class="group-hover:opacity-75 object-cover object-center w-full h-48 mx-auto rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="avatar" />
+  
+                  <div class="mt-2">
+                      <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">Patterson Johnson</h3>
+                      <span class="mt-1 font-medium text-gray-600 dark:text-gray-300">👨‍💼 GRD</span>
+                  </div>
               </a>
           </div>
-         
-          <a href="#home" class="sticky bottom-8 z-20 animate-bounce duration-300">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 border shadow-md rounded-full p-3 bg-white">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
-            </svg>        
-          </a>
-          
       </div>
-    </section>
-
-
+  </section>
     <!-- 
       Footer
     -->
@@ -185,7 +179,7 @@
       <div class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
           <a href="#" class="text-2xl font-bold text-gray-800 transition-colors duration-300 dark:text-skybg-sky-500 hover:text-sky-500 dark:hover:text-sky-400"></a>
   
-          <p class="text-sm text-gray-50 dark:text-gray-300">© Built by Res life team. 2023</p>
+          <p class="text-sm text-gray-700 dark:text-gray-300">© Built by Res life team. 2023</p>
   
           <div class="flex -mx-2">
               
