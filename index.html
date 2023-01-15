@@ -27,13 +27,13 @@
   <body class="bg-gradient-to-b from-gray-900 via-blue-900 to-blue-800">
 
 
-    <div class="relative z-50 lg:hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    <div id="phone-body" class="relative z-50 lg:hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
       <!--
         Background backdrop, show/hide based on slide-over state.
       -->
-      <div id="phone-bg" onclick="togglePhoneMenu()" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity opacity-0 ease-in-out duration-500"></div>
+      <div id="phone-bg" onclick="togglePhoneMenu()" class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity opacity-0 ease-in-out duration-500 hidden"></div>
     
-      <div class="fixed inset-0 overflow-hidden">
+      <div class="">
         <div class="absolute inset-0 overflow-hidden">
           <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
             <!--
@@ -62,9 +62,9 @@
                   <div class="pt-6 px-1 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                       <div class="space-y-2 font-gloria py-6">
-                        <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-400/10">Home</a>
+                        <a href="#home" onclick="togglePhoneMenu()" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-400/10">Home</a>
         
-                        <a href="#" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-400/10">Our Team</a>
+                        <a href="#our-team" onclick="togglePhoneMenu()" class="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-50 hover:bg-gray-400/10">Our Team</a>
                       </div>
                     </div>
                   </div>
@@ -82,7 +82,7 @@
     <!-- 
       Header
     -->
-    <section id="home" class="bg- dark:bg-gray-900">
+    <section id="home" class=" dark:bg-gray-900">
       <nav x-data="{ isOpen: false }" class="container p-6 mx-auto lg:flex lg:justify-between lg:items-center">
           <div class="flex items-center justify-between">
               <div>
@@ -138,7 +138,7 @@
     <!-- 
       Our team section
     -->
-    <section id="our-team" class="bg- font-gloria dark:bg-gray-900">
+    <section id="our-team" class=" font-gloria dark:bg-gray-900">
       <div class="container px-6 py-10 mx-auto relative flex flex-col items-end">
 
           <div class="w-full">
@@ -202,7 +202,7 @@
         const closebtn  = document.getElementById("phone-close-btn");
       
         const bgClasses = [
-          "opacity-100", "opacity-0"
+          "opacity-100", "opacity-0", "hidden"
         ]
       
         const slideOver = [
@@ -224,6 +224,8 @@
         closeBtn.forEach(element => {
           closebtn.classList.toggle(element);
         });
+
+        // document.getElementById("phone-body").classList.toggle("hidden");
     }
   
     </script>

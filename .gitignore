@@ -25,6 +25,3 @@ dist-ssr
 
 # files
 style.css
-tailwind.config.cjs
-package-lock.json
-package.json
