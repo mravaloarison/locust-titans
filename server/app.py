@@ -12,12 +12,12 @@ with open("data.csv") as file:
     data = [item for item in read]
 
 
-@app.route("/")
+@app.route("/json")
 def index():
     return jsonify(data)
 
 
-@app.route("/home")
+@app.route("/")
 def home():
     return render_template("home.html", data = data)
 
