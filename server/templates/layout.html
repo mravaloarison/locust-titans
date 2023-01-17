@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+      nabla, londrina, bungee, gloria
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Londrina+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Gloria+Hallelujah&family=Londrina+Shadow&display=swap" rel="stylesheet">
+
+
+    <!-- 
+      Confetti
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+    <title>Locust titans</title>
+</head>
+<body class="font-gloria">
+
+    {% block body %}{% endblock %}
+    
+    <!-- 
+      Footer
+    -->
+    <footer class="font-gloria dark:bg-gray-900">
+        <div class="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-0 sm:flex-row">
+            <a href="#" class=""></a>
+    
+            <p class="text-sm text-gray-700 dark:text-gray-300">© Built by Res life team. 2023</p>
+    
+            <div class="flex -mx-2"></div>
+        </div>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
