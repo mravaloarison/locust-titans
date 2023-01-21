@@ -1,3 +1,4 @@
+/*! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com*/
 *,
 :after,
 :before {
@@ -625,6 +626,9 @@ video {
 }
 .text-center {
   text-align: center;
+}
+.font-quicksand {
+  font-family: Quicksand, sans-serif;
 }
 .font-gloria {
   font-family: Gloria Hallelujah, cursive;

@@ -8,9 +8,9 @@ module.exports = {
     extend: {},
     fontFamily: {
       'nabla': ['Nabla', 'cursive'],
-      'landrina': ['Londrina Shadow', 'cursive'],
       'bungee': ['Bungee Shade', 'cursive'],
       'gloria': ['Gloria Hallelujah', 'cursive'],
+      'quicksand': ['Quicksand', 'sans-serif']
     },
   },
   plugins: [],

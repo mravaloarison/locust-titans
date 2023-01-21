@@ -627,6 +627,9 @@ video {
 .text-center {
   text-align: center;
 }
+.font-quicksand {
+  font-family: Quicksand, sans-serif;
+}
 .font-gloria {
   font-family: Gloria Hallelujah, cursive;
 }
