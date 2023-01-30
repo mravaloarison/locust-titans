@@ -122,12 +122,12 @@
             -->
     
             <a href="details/{{ loop.index }}" class="group w-full text-center">
-                {% set img_link = loop.index | string + '.jpeg' %}
-                {% if loop.index == 1 %}
-                <img class="group-hover:opacity-75 object-cover object-center w-full h-72 mx-auto rounded-lg" src="{{ url_for('static', filename = '1.jpg') }}" alt="" />
+                {% if loop.index == 1 or loop.index == 8 %}
+                {% set img_link = loop.index | string + '.jpg' %}
                 {% else %}
-                <img class="group-hover:opacity-75 object-cover object-center w-full h-72 mx-auto rounded-lg" src="{{ url_for('static', filename = img_link) }}" alt="" />
+                {% set img_link = loop.index | string + '.jpeg' %}
                 {% endif %}
+                <img class="group-hover:opacity-75 object-cover object-center w-full h-72 mx-auto rounded-lg" src="{{ url_for('static', filename = img_link) }}" alt="" />
                 <div class="mt-2">
                     <h3 class="text-lg font-medium text-gray-700 dark:text-gray-200">{{ item['Full name'] }}</h3>
                     <span class="mt-1 text-sm font-medium text-gray-600 dark:text-gray-300">

@@ -24,7 +24,11 @@ Details
         <div class="absolute w-full bg-blue-600 -z-10 md:h-96 rounded-2xl"></div>
         
         <div class="w-full p-6 bg-blue-600 md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
+            {% if id == 1 or id == 8%}
+            {% set img_link = id | string + '.jpg' %}
+            {% else %}
             {% set img_link = id | string + '.jpeg' %}
+            {% endif %}
             <img class="h-24 w-24 md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl" src="{{ url_for('static', filename = img_link) }}" alt="" />
             
             <div class="mt-2 md:mx-6">
